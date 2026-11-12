@@ -62,7 +62,7 @@
 
 .page-wide { max-width: 1100px; }
 
-.find-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px; align-items: start; }
+.find-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 100px; align-items: start; }
 .find-layout .card { flex-wrap: wrap; }
 
 @media (max-width: 800px) {

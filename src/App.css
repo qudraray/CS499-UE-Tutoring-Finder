@@ -59,3 +59,12 @@
 .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
 .form-actions { display: flex; gap: 8px; margin-top: 16px; }
 .error { color: #b3261e; font-weight: 600; margin: 12px 0 0; }
+
+.page-wide { max-width: 1100px; }
+
+.find-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 24px; align-items: start; }
+.find-layout .card { flex-wrap: wrap; }
+
+@media (max-width: 800px) {
+  .find-layout { grid-template-columns: 1fr; }
+}

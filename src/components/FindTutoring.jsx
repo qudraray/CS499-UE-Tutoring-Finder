@@ -26,41 +26,4 @@ export default function FindTutoring({ sessions, onView }) {
   })
 
   return (
-    <main className="page">
-      <section>
-        <div className="section-head">
-          <h2>Today's sessions</h2>
-          <label className="day-pick">
-            Day:
-            <select value={todayView} onChange={(e) => setTodayView(e.target.value)}>
-              {DAYS.map((d) => (
-                <option key={d} value={d}>{d}{d === realToday ? ' (today)' : ''}</option>
-              ))}
-            </select>
-          </label>
-        </div>
-        {todays.length === 0 ? (
-          <p className="muted">No sessions scheduled for this day.</p>
-        ) : (
-          todays.map((s) => <SessionCard key={s.id} session={s} onView={onView} />)
-        )}
-      </section>
-
-      <section>
-        <h2>Find a tutor</h2>
-        <SearchFilters
-          filters={filters}
-          onChange={setFilters}
-          subjects={subjects}
-          locations={locations}
-        />
-        <p className="count">{results.length} sessions found</p>
-        {results.length === 0 ? (
-          <p className="muted">No sessions match. Try clearing a filter.</p>
-        ) : (
-          results.map((s) => <SessionCard key={s.id} session={s} onView={onView} />)
-        )}
-      </section>
-    </main>
-  )
-}
+    <main className="page page-wide">

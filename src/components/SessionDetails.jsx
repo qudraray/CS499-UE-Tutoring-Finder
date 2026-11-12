@@ -34,4 +34,3 @@ export default function SessionDetails({ session, onBack }) {
     </main>
   )
 }
-}

@@ -1,8 +1,8 @@
 import { tutors } from '../data/sessions'
 import { formatWhen, tutorLabel } from '../utils'
 
-// TODO: replace with the real request form link from the UE tutoring page
-const REQUEST_FORM_URL = 'https://www.evansville.edu/'
+const REQUEST_FORM_URL =
+  'https://forms.cloud.microsoft/pages/responsepage.aspx?id=Mn3Vp_fKjUmhj-Qp-N8faBkabvyqqIFHqiRsNKjqj5xUNEtUSzJYMjdKOUVRME41VkpTNVpOU001SCQlQCN0PWcu&route=shorturl'
 
 export default function SessionDetails({ session, onBack }) {
   const tutor = tutors.find((t) => t.id === session.tutorId)
@@ -27,11 +27,11 @@ export default function SessionDetails({ session, onBack }) {
       {session.type === 'request' && (
         <p className="notice">
           Requests need 72 hours' notice.{' '}
-          <a href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=Mn3Vp_fKjUmhj-Qp-N8faBkabvyqqIFHqiRsNKjqj5xUNEtUSzJYMjdKOUVRME41VkpTNVpOU001SCQlQCN0PWcu&route=shorturl" target="_blank" rel="noreferrer">Open UE's request form</a>
+          <a href={REQUEST_FORM_URL} target="_blank" rel="noreferrer">Open UE's request form</a>
         </p>
       )}
       <p className="tip">Tip: Bring your course materials and specific questions.</p>
-      <button className="btn" onClick={onBack}>Back to results</button>
     </main>
   )
+}
 }
